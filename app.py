@@ -3,7 +3,7 @@ import tensorflow as tf
 from keras.preprocessing import image
 from PIL import Image
 import numpy as np
-import cv2
+
 
 # Load the trained model once
 @st.cache_resource
