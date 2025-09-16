@@ -18,11 +18,12 @@ def Transfername(namecode):
 
 # Preprocess uploaded image
 def preprocess_image(uploaded_file):
-    im = np.asarray(Image.open(uploaded_file).convert("RGB"))
-    img = cv2.resize(im, (224,224))
-    img = np.array(img) / 255.0
+    im = Image.open(uploaded_file).convert("RGB")
+    im = im.resize((224, 224))  # use PIL resize instead of cv2
+    img = np.array(im) / 255.0
     img = np.expand_dims(img, axis=0)
     return img
+
 
 # Predict using the model
 def predict_output(img):
