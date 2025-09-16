@@ -1,6 +1,7 @@
-tensorflow
-keras
+tensorflow==2.2.4
+keras==1.14
 streamlit
 opencv-python
 pillow
 numpy
+python==3.6
