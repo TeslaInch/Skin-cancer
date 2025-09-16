@@ -17,7 +17,8 @@ def preprocess_image(image_path):
 
 
 def predict_output(img):
-    loaded_model = tf.keras.models.load_model('my_model.h5')
+    loaded_model = tf.keras.models.load_model('my_model.h5', compile=False)
+
     pred_result =  loaded_model.predict(img)
     if pred_result[0][0] > 0.5:
         result = 1

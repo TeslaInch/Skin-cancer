@@ -8,7 +8,8 @@ import numpy as np
 # Load the trained model once
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model("my_model.h5")
+    return tf.keras.models.load_model('my_model.h5', compile=False)
+
 
 model = load_model()
 
